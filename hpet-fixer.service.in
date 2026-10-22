@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple Python script for set HPET as default clocksource and tweak hpet max-user-freq value
+
+[Service]
+Type=oneshot
+
+[Install]
+WantedBy=basic.target
+
+[Service]
+ExecStart=-:TARGET_BIN:/hpet_fixer
+
+
